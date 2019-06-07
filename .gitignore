@@ -8,6 +8,8 @@ backend/runtime/
 docs/
 .DS_Store
 image/
+ai/.idea/*
+backend/.idea/*
 
 # User-specific stuff
 .idea/**/workspace.xml
