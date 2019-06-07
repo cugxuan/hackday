@@ -91,19 +91,19 @@ let vm = new Vue( {
 } )
 
 
-//var url = "http://api.cugxuan.cn/api/hackday/testquery?name=123345";
+var url = "http://api.cugxuan.cn/api/hackday/testquery?name=123345";
 function push() {
     
 
 
     var xmlhttp =new XMLHttpRequest();
 
-    alert(xmlhttp.readyState);
+    //alert(xmlhttp.readyState);
 
     xmlhttp.onreadystatechange=function() {
-        if(xmlhttp.readyState == 4)
+        if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
 
-        alert(xmlhttp.readyState);
+        //alert(xmlhttp.readyState);
         alert(xmlhttp.responseText);
 
         var jsonObj = JSON.parse(xmlhttp.responseText);//JSON.parse() returns JSON object 
@@ -112,10 +112,11 @@ function push() {
         // document.getElementById("time").innerHTML = jsonObj.time;
 
     }
-    xmlhttp.open("POST",url,true);
+    xmlhttp.open("GET",url,true);
     xmlhttp.send();
 }
 
+/*
 function push1() {
 
     //alert("123");
@@ -127,10 +128,11 @@ function push1() {
         //    "a":"b",
         //    "c":"d"
         //},
-        success: function(data) { //【成功回调】
-            console.log(data);
+        success: function(result) { //【成功回调】
+            alert(result);
         },
         error: function(xhr, type) { //【失败回调】
         }
         });
 }
+*/
