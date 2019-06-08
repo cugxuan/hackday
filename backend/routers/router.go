@@ -13,7 +13,6 @@ func InitRouter() *gin.Engine {
 
 	r := gin.New()
 
-	//cors.Default().Handler(r)
 	r.Use(cors.Default())
 	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
@@ -38,22 +37,12 @@ func InitRouter() *gin.Engine {
 	apihack := r.Group("/api/hackday")
 	{
 		apihack.POST("/merge_face", hackday.MergeFace)
-		apihack.GET("/get_status",hackday.GetStatus)
-		apihack.POST("/send_share",hackday)
+		apihack.GET("/get_status", hackday.GetStatus)
+		apihack.POST("/send_share", hackday.Send_share)
+		apihack.POST("/get_hot", hackday.GetHot)
+		apihack.POST("/get_summary", hackday.GetSummary)
+
 	}
 
-	//apihack := r.Group("/api/hackday")
-	//apihack.Use(jwt.JWT())
-	//{
-	//	//测试鉴权
-	//	apihack.GET("/testauth", func(c *gin.Context) {
-	//		c.JSON(200, gin.H{
-	//			"message": "test",
-	//		})
-	//	})
-	//	r.POST("/upload", v1.Upload_img)
-	//}
-
-	//r.Run(":8000")
 	return r
 }
