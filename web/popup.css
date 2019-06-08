@@ -1,6 +1,6 @@
 body {
     min-width: 300px;
-    min-height: 428px;
+    min-height: 375px;
 }
 
 div {
@@ -14,5 +14,5 @@ div {
 }
 
 .share {
-    margin-top: 40px;
+    margin-top: 70px;
 }

@@ -12,7 +12,6 @@ $(document).ready(function () {
         success: function (response) {
             if($(".text")) {
                 $(".text").remove();
-                console.log("321");
             } 
             var text = document.createElement("div");
             text.className = 'text';
@@ -47,7 +46,6 @@ $("#submit").click(function () {
         success: function (response) {
             if($(".text")) {
                 $(".text").remove();
-                console.log("123");
             }   
             var text = document.createElement("div");
             text.className = 'text';
@@ -69,14 +67,6 @@ $("#submit").click(function () {
     })
     
 });
-
-        // var jsonObj = [
-        //     {"title": "123","count": "1"},
-        //     {"title": "12342","count": "4"},
-        //     {"title": "123123","count": "7"},
-        //     {"title": "123123","count": "8"}
-        // ];
-        
         
 
 
