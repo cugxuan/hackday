@@ -1,4 +1,4 @@
-var sumUrl = "http://api.cugxuan.cn/api/hackday/get_summary";
+var sumUrl = "http://api.cugxuan.cn:8888/api/hackday/get_summary";
 
 var queryInfo = {
     "active": true

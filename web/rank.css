@@ -21,9 +21,9 @@ body {
     height: 30px;
 }
 
-.rank div {
+.text div { 
     font-size: 10px;
-    background-color: aqua;
+    border: 2px solid black;
     width: 80%;
     height: 40px;
     margin: 10px auto;
