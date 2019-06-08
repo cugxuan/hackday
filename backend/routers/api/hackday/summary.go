@@ -3,6 +3,7 @@ package hackday
 import (
 	"backend/models"
 	"backend/pkg/e"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -28,6 +29,8 @@ func Send_share(c *gin.Context) {
 func GetHot(c *gin.Context) {
 	tag := c.PostForm("tag")
 
+	fmt.Println(tag)
+	fmt.Println(c.Request)
 	var code int
 	code = e.SUCCESS
 	o := models.GetHot(tag)

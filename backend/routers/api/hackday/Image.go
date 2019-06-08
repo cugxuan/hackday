@@ -93,3 +93,8 @@ func TestCmdPython(t *testing.T) {
 	}
 	t.Log("转换成功")
 }
+
+// 合并图片，通过前端传输底图和二维码，两端文字
+func Merge_img() {
+	
+}
