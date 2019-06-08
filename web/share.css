@@ -1,0 +1,38 @@
+body {
+    min-width: 420px;
+    min-height: 250px;
+    max-width: 420px;
+    max-height: 250px;
+    background: #eee;
+}
+
+
+.sum {
+    background-color: red;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 200px;
+    height: 40px;
+}
+
+.com {
+    background-color: blue;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    width: 200px;
+    height: 40px;
+}
+
+#qrcode {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#confirm {
+    position: absolute;
+    top: 100px;
+    right: 40px;
+}

@@ -1,0 +1,18 @@
+body {
+    min-width: 300px;
+    min-height: 375px;
+}
+
+div {
+    width: 80%;
+    height: 60px;
+    margin: 40px auto;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+    border: 2px solid black;
+}
+
+.share {
+    margin-top: 70px;
+}

@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Matrix67.com - Home</title>
+
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<script src="index.js"></script>
+
+<body>
+<div style="height: 500px; padding-top: 65px; position: absolute; left: 50%; width: 600px; margin-left: -300px;">
+	<table id="grid">
+		<script type="text/javascript">
+		var tdid = 0;
+		for(var i = 1; i <= 16; i++){
+			document.write("<tr>")
+			for(var j = 1; j <= 25; j++){
+				tdid = (i - 1) * 25 + j;
+				document.write("<td id=\"td" + tdid.toString() + "\" data-timestamp=\"0\" onclick=\"inverse(" + tdid.toString() + ")\" />");
+			}
+			document.write("</tr>");
+		}
+		var loadingGrid = 0;
+		var timer1 = window.setInterval("loading()", 10);
+		var evtSource = new EventSource("get_state.php");
+		evtSource.onmessage = function(e) {
+			freshGrid(e.data.split("\n").join(""));
+		}
+		</script>
+    </table>
+    
+
+</div>
+</body>
+</html>
