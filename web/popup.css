@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #eee;
+}
+
+.share {
+    width: 100%;
+    height: 40px;
+    background-color: aqua;
+}
