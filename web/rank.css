@@ -1,0 +1,38 @@
+body {
+    width: 1080px;
+    height: 1080px;
+}
+
+.search {
+    width: 80%;
+    height: 40px;
+    margin: 10px auto;
+}
+
+.search input {
+    height: 30px;
+    width: 88%;
+    margin-right: auto;
+}
+
+.search button {
+    float: right;
+    width: 8%;
+    height: 30px;
+}
+
+.rank div {
+    font-size: 10px;
+    background-color: aqua;
+    width: 80%;
+    height: 40px;
+    margin: 10px auto;
+}
+
+.title {
+    float: left;
+}
+
+.count {
+    float: right;
+}
