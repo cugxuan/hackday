@@ -22,8 +22,8 @@ func init() {
 
 func ConnectDB() {
 	var (
-		err                                               error
-		dbType, dbName, user, password, host, tablePrefix string
+		err                                  error
+		dbType, dbName, user, password, host string
 	)
 	//sec, err := setting.ServerSetting
 
@@ -32,7 +32,7 @@ func ConnectDB() {
 	user = setting.DatabaseSetting.User
 	password = setting.DatabaseSetting.Password
 	host = setting.DatabaseSetting.Host
-	tablePrefix = setting.DatabaseSetting.TablePrefix
+	//tablePrefix = setting.DatabaseSetting.TablePrefix
 
 	db, err = gorm.Open(dbType, fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=utf8&parseTime=True&loc=Local",
 		user,
@@ -44,10 +44,12 @@ func ConnectDB() {
 		logging.Error(err)
 	}
 
-	gorm.DefaultTableNameHandler = func(db *gorm.DB, defaultTableName string) string {
-		return tablePrefix + defaultTableName;
-	}
+	//gorm.DefaultTableNameHandler = func(db *gorm.DB, defaultTableName string) string {
+	//	return tablePrefix + defaultTableName;
+	//}
 
+	// 全局禁用表名复数
+	// 默认情况 type User struct {} 默认表名是`users`
 	db.SingularTable(true)
 	db.DB().SetMaxIdleConns(10)
 	db.DB().SetMaxOpenConns(100)

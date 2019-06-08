@@ -38,6 +38,8 @@ func InitRouter() *gin.Engine {
 	apihack := r.Group("/api/hackday")
 	{
 		apihack.POST("/merge_face", hackday.MergeFace)
+		apihack.GET("/get_status",hackday.GetStatus)
+		apihack.POST("/send_share",hackday)
 	}
 
 	//apihack := r.Group("/api/hackday")
