@@ -1,4 +1,5 @@
-var comUrl = "http://api.cugxuan.cn:8888/api/hackday/send_share";
+var picUrl = "http://api.cugxuan.cn/api/hackday/get_qrcode";
+var comUrl = "http://api.cugxuan.cn/api/hackday/send_share";
 
 var _title,_source,_sourceUrl,_pic,_showcount,_desc,_summary,_site,_url,
             _width = 600,
@@ -18,6 +19,8 @@ chrome.tabs.query(queryInfo, function (tabs) {
     _title = tabs[0].title;
 });
  
+var x;
+
 //提交分享事件
 $("#confirm").click(function () { 
 
@@ -29,16 +32,29 @@ $("#confirm").click(function () {
         "comment": com,
         "link": _url,
         "title": _title,
-    }
+    };
 
-    console.log(data);
-
+    // $.ajax({
+    //     type: "POST",
+    //     url: picUrl,
+    //     data: data,
+    //     dataType: "json",
+    //     success: function (response) {
+    //         console.log(response.data);
+    //         x = response.data.link;
+    //         console.log(x);
+    //     }
+    //     });
+    
     $.ajax({
         type: "POST",
         url: comUrl,
         data: data,
         dataType: "json",
     });
+
+
+    $("#back").remove();
 
     var code = {
         text: _url,
@@ -56,6 +72,7 @@ $("#confirm").click(function () {
     $("#confirm").remove();
 
 
+
     var text1 = document.createElement("p");
     var text2 = document.createElement("p");
 
@@ -68,8 +85,9 @@ $("#confirm").click(function () {
     document.body.appendChild(text1);
     document.body.appendChild(text2);
 
-
 });
+
+
 
 
 

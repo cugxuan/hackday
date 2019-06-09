@@ -1,16 +1,30 @@
 body {
-    min-width: 300px;
-    min-height: 375px;
+    min-width: 200px;
+    min-height: 300px;
+}
+
+#back {
+    margin: 0;
+    width: 300px;
 }
 
 div {
-    width: 80%;
+    position: absolute;
+    left: 60px;
+    width: 200px;
     height: 60px;
-    margin: 40px auto;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 40px;
-    border: 2px solid black;
+}
+
+.share {
+    top: 70px;
+}
+
+.rank {
+    top: 230px;
+}
+
+.com {
+    top: 310px;
 }
 
 div:hover {
@@ -19,4 +33,12 @@ div:hover {
 
 .share {
     margin-top: 70px;
+}
+
+#close {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 20px;
+    left: 277px;
 }

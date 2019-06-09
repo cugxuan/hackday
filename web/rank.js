@@ -1,6 +1,6 @@
 var tag;
 
-var url = "http://api.cugxuan.cn:8888/api/hackday/get_hot";
+var url = "http://api.cugxuan.cn/api/hackday/get_hot";
 
 $(document).ready(function () {
 
@@ -33,7 +33,7 @@ function writeText() {
             var text = document.createElement("div");
             text.className = 'text';
             $(".rank").append(text);
-            for (var i in response.data) {
+            for (var i = 0; i <= 2 ;i++) {
                 var x = document.createElement("div");
                 x.className = "rank" + i;
                 $(".text").append(x);

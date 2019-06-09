@@ -1,29 +1,25 @@
 body {
     min-width: 420px;
     min-height: 250px;
-    max-width: 420px;
-    max-height: 250px;
     background: #eee;
 }
 
 
 .sum {
-    background-color: red;
     position: absolute;
-    top: 10px;
-    left: 20px;
-    width: 200px;
-    height: 40px;
+    top: 150px;
+    left: 145px;
+    width: 220px;
+    height: 245px;
 }
 
 .com {
-    background-color: blue;
     position: absolute;
-    top: 60px;
-    left: 20px;
-    width: 200px;
-    height: 40px;
-}
+    top: 150px;
+    left: 430px;
+    width: 220px;
+    height: 245px;
+}|
 
 #qrcode {
     position: absolute;
@@ -32,9 +28,11 @@ body {
 }
 
 #confirm {
+    width: 65px;
+    height: 65px;
     position: absolute;
-    top: 100px;
-    right: 40px;
+    top: 380px;
+    left: 680px;
 }
 
 img {
@@ -57,4 +55,9 @@ img {
     left: 340px;
     width: 280px;
     height: 70px;
+}
+
+#back {
+    width: 780px;
+
 }
