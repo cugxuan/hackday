@@ -1,9 +1,9 @@
 {
-    "name": "分享卡片hackday",
+    "name": "热读",
     "version": "1.0.0",
     "manifest_version": 2,
-    "description": "分享你喜欢的一切",
-    "author": "hackday12",
+    "description": "随便写点什么话。",
+    "author": "中国队可还行",
     "icons": {
         "16": "images/icon.png",
         "48": "images/icon.png",
