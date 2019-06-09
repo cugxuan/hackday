@@ -15,11 +15,6 @@ body {
     margin-right: auto;
 }
 
-.search button {
-    float: right;
-    width: 8%;
-    height: 30px;
-}
 
 .text div { 
     font-size: 10px;
@@ -35,4 +30,15 @@ body {
 
 .count {
     float: right;
+}
+
+#submit {
+    float: right;
+    width: 8%;
+    height: 30px;
+    background-color: black;
+}
+
+#submit img {
+    width: 40px;
 }

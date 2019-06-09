@@ -13,6 +13,10 @@ div {
     border: 2px solid black;
 }
 
+div:hover {
+    cursor: pointer;
+}
+
 .share {
     margin-top: 70px;
 }

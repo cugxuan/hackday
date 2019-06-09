@@ -42,7 +42,7 @@ $("#confirm").click(function () {
 
     var code = {
         text: _url,
-        size: 50.86,
+        size: 90,
         background: "#ffffff",
         foreground: "#000000" 
     
@@ -50,10 +50,24 @@ $("#confirm").click(function () {
     $("#qrcode").qrcode(code);
 
     $("#card").attr("src", "images/card.png");
-    $("#card").css("width", "640px");
+    $("#card").css("width", "800px");
     $(".sum").remove();
     $(".com").remove();
     $("#confirm").remove();
+
+
+    var text1 = document.createElement("p");
+    var text2 = document.createElement("p");
+
+    text1.className = "text1";
+    text2.className = "text2";
+
+    text1.innerText = sum;
+    text2.innerText = com;
+
+    document.body.appendChild(text1);
+    document.body.appendChild(text2);
+
 
 });
 

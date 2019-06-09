@@ -12,7 +12,6 @@ $(document).ready(function () {
 $("#submit").click(function () { 
     tag = $("#input").val();
 
-
     console.log(tag);
 
     writeText();
@@ -24,7 +23,7 @@ function writeText() {
     $.ajax({
         type: "POST",
         url: url,
-        data: tag,
+        data: {"tag": tag},
         dataType: "json",
         success: function (response) {
             console.log(response);

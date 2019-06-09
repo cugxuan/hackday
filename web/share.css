@@ -27,12 +27,34 @@ body {
 
 #qrcode {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 280px;
+    left: 650px;
 }
 
 #confirm {
     position: absolute;
     top: 100px;
     right: 40px;
+}
+
+img {
+    z-index: -1;
+}
+
+.text1 {
+    font-size: 20px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 235px;
+    height: 150px;
+}
+
+.text2  {
+    font-size: 35px;
+    position: absolute;
+    top: 25px;
+    left: 340px;
+    width: 280px;
+    height: 70px;
 }
